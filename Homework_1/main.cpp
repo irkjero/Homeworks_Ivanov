@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <fstream>
 
 // Game of life
 class GameOfLife{
@@ -14,6 +15,9 @@ class GameOfLife{
 
     public:
         GameOfLife(int rows_tmp, int columns_tmp, const field_type& field_tmp){
+            // Constructor
+            // field - field configuration at present time
+            // new_field - field's new configuration
             rows = rows_tmp;
             columns = columns_tmp;
             field = field_tmp;
@@ -21,7 +25,7 @@ class GameOfLife{
         }
 
         void play(int num_iterations){
-            // make num_iterations of generations
+            // make num_iterations
             for(int i = 0; i < num_iterations; i++)
                 next_generation();
         }
@@ -53,6 +57,7 @@ class GameOfLife{
                     tmp_j = j;
                     if((i == row_ind) && (j == column_ind))
                         continue;
+
                     if( tmp_i < 0 )
                         continue;
 //                        tmp_i = rows + tmp_i;
@@ -80,7 +85,7 @@ class GameOfLife{
         void Print(){
             for(int i = 0; i < rows; i++) {
                 for (int j = 0; j < columns; j++) {
-                    std::cout << field[i][j];
+                    std::cout << field[i][j] <<"    ";
                 }
                 std::cout << std::endl;
             }
@@ -88,19 +93,58 @@ class GameOfLife{
         }
 };
 
-int main() {
-    int rows = 3;
-    int columns = 3;
+int main(int argc, char *argv[]) {
+    int rows = 0;
+    int columns = 0;
     int num_iterations = 0;
+    int row_c = 0;
+    int column_c = 0;
+    char c;
+    std::string tmp;
+    std::ifstream file;
+    std::string filename;
+
+    filename = argv[1];
+    num_iterations = std::stoi(argv[2]);
+
+    file.open(filename, std::ifstream::in);
+
+    std::getline(file, tmp);
+    for(auto p = tmp.begin(); p != tmp.end(); p++){
+        if(*p == ' ') {
+            std::string first{tmp.begin(), p};
+            rows = std::stoi(first);
+            std::string second{tmp.begin(), p};
+            columns = std::stoi(second);
+        }
+    }
+
     std::vector<std::vector<char>> field(rows, std::vector<char>(columns));
-    field = {{'*', '_', '*'},
-             {'_', '*', '_'},
-             {'*', '_', '*'}};
+
+    while(file.get(c)) {
+        if (c == '\n'){
+            row_c++;
+            column_c = 0;
+            continue;
+        }
+        field[row_c][column_c++] = c;
+    }
+
     GameOfLife new_game{rows, columns, field};
-    new_game.Print();
-//    new_game.next_generation();
-    num_iterations = 10;
-    new_game.play(num_iterations);
-    new_game.Print();
+
+    if(num_iterations == 0){
+        std::cout << "Please, press \'Enter \' botton to start interactive mode" << std::endl;
+        while(std::cin.get()  == '\n' ){
+            new_game.Print();
+            new_game.next_generation();
+        }
+    }
+    else{
+        std::cout << "First configuration." << std::endl;
+        new_game.Print();
+        new_game.play(num_iterations);
+        std::cout << "Configuration after " << num_iterations << " iterations." << std::endl;
+        new_game.Print();
+    }
     return 0;
 }
