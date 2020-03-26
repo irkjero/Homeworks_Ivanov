@@ -30,6 +30,25 @@ public:
         this->separator = separator;
     }
 
+    InputIterator &operator=(const InputIterator &rhs) {
+        return (*this);
+    }
+
+    bool operator==(InputIterator rhs) {
+        return (rhs.isEnd == this->isEnd);
+    }
+
+    bool operator!=(InputIterator rhs) {
+        return rhs.isEnd != this->isEnd;
+    }
+
+    auto operator*() {
+        return lines;
+    }
+
+
+
+
 }
 
 #endif //PARSER_CSV_INPUTITERATOR_H

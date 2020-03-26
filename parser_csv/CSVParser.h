@@ -1,13 +1,14 @@
 //
 // Created by Петр on 26.03.2020.
 //
+
+#ifndef PARSER_CSV_CSVPARSER_H
+#define PARSER_CSV_CSVPARSER_H
+
 #include <string>
 #include <vector>
 #include <iostream>
 #include "InputIterator.h"
-
-#ifndef PARSER_CSV_CSVPARSER_H
-#define PARSER_CSV_CSVPARSER_H
 
 template<typename... Arguments>
 class CSVParser {
@@ -22,19 +23,19 @@ public:
         this->separator = separator;
     }
 
-    begin() {
-        auto i =iterator;
+    InputIterator<Arguments...> begin() {
+        auto i =InputIterator<Arguments...>(file, false, separator);
         for (int32_t j = 0; j <= skipped_lines; ++j) {
             if (i.isEnd) {
-                return ;
+                return InputIterator<Arguments...>(file, true, separator);
             }
             ++i;
         }
         return i;
     }
 
-     end() {
-        return ;
+    InputIterator<Arguments...> end() {
+        return InputIterator<Arguments...>(file, true, separator);;
     }
 
 };
