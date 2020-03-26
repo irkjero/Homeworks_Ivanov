@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include "InputIterator.h"
 
 #ifndef PARSER_CSV_CSVPARSER_H
 #define PARSER_CSV_CSVPARSER_H
@@ -19,6 +20,21 @@ public:
         file = input_file;
         skipped_lines = skipped_line;
         this->separator = separator;
+    }
+
+    begin() {
+        auto i =iterator;
+        for (int32_t j = 0; j <= skipped_lines; ++j) {
+            if (i.isEnd) {
+                return ;
+            }
+            ++i;
+        }
+        return i;
+    }
+
+     end() {
+        return ;
     }
 
 };
