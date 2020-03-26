@@ -46,8 +46,20 @@ public:
         return lines;
     }
 
-
-
+    InputIterator operator++() {
+        if (!lastElement) {
+            std::string line ;
+            std::getline(*file,line);
+            std::istringstream ss(line);
+            std::cout<<"line = "<<line<<std::endl;
+            lines = parse<Args...>(&ss, separator, index, 0);
+            index++;
+            lastElement = file->eof();
+        } else {
+            isEnd = file->eof();
+        }
+        return (*this);
+    }
 
 }
 

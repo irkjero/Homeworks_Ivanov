@@ -64,8 +64,8 @@ std::tuple<T, Arg, Args...> parse(std::istringstream *is, char separator, int li
     temp >> t;
 //    position = is->tellg();
 
-//    std::cout << "pos: " << position << std::endl;
-//    std::cout << temp.fail() << is->eof() << std::endl;
+    std::cout << "pos: " << position << std::endl;
+    std::cout << temp.fail() << is->eof() << std::endl;
     if (temp.fail() || is->eof()) {
         std::string exception = "Invalid format of input data! The error is at string numberssss "
                                 + std::to_string(line_number + 1) + " pos number" + std::to_string(position);
