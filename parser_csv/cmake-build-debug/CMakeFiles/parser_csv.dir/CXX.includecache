@@ -6,9 +6,43 @@
 
 #IncludeRegexTransform: 
 
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/parser_csv/CSVParser.h
+string
+-
+vector
+-
+iostream
+-
+InputIterator.h
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/parser_csv/InputIterator.h
+
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/parser_csv/InputIterator.h
+vector
+-
+memory
+-
+istream
+-
+fstream
+-
+iostream
+-
+
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/parser_csv/TupleLibrary.h
+tuple
+-
+sstream
+-
+iostream
+-
+
 /Users/xloride/Desktop/Homeworks/Homeworks_c++/parser_csv/main.cpp
 iostream
 -
 fstream
 -
+CSVParser.h
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/parser_csv/CSVParser.h
+TupleLibrary.h
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/parser_csv/TupleLibrary.h
 

@@ -3,4 +3,4 @@ project(parser_csv)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(parser_csv main.cpp CSVParser.h cmake-build-debug/InputIterator.h cmake-build-debug/InputIterator.h InputIterator.h TupleLibrary.h)
+add_executable(parser_csv main.cpp CSVParser.h InputIterator.h TupleLibrary.h)

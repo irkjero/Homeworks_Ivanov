@@ -83,7 +83,10 @@
 		<Unit filename="/Users/xloride/Desktop/Homeworks/Homeworks_c++/parser_csv/CSVParser.h">
 			<Option target="parser_csv"/>
 		</Unit>
-		<Unit filename="/Users/xloride/Desktop/Homeworks/Homeworks_c++/parser_csv/cmake-build-debug/InputIterator.h">
+		<Unit filename="/Users/xloride/Desktop/Homeworks/Homeworks_c++/parser_csv/InputIterator.h">
+			<Option target="parser_csv"/>
+		</Unit>
+		<Unit filename="/Users/xloride/Desktop/Homeworks/Homeworks_c++/parser_csv/TupleLibrary.h">
 			<Option target="parser_csv"/>
 		</Unit>
 		<Unit filename="/Users/xloride/Desktop/Homeworks/Homeworks_c++/parser_csv/main.cpp">

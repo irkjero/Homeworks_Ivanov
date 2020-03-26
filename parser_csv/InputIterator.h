@@ -61,6 +61,6 @@ public:
         return (*this);
     }
 
-}
+};
 
 #endif //PARSER_CSV_INPUTITERATOR_H
