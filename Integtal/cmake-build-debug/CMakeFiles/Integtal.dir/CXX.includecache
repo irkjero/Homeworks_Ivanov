@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/Integtal/main.cpp
+iostream
+-
+cstdint
+-
+tuple
+-
+

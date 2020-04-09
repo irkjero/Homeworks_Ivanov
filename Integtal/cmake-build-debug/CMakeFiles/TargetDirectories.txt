@@ -1,0 +1,3 @@
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/Integtal/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/Integtal/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/Integtal/cmake-build-debug/CMakeFiles/Integtal.dir
