@@ -3,4 +3,4 @@ project(Integtal)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Integtal main.cpp)
+add_executable(Integtal main.cpp Gausses.h Integrate.h FuncBank.h)

@@ -6,11 +6,23 @@
 
 #IncludeRegexTransform: 
 
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/Integtal/FuncBank.h
+
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/Integtal/Gausses.h
+tuple
+-
+
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/Integtal/Integrate.h
+tuple
+-
+
 /Users/xloride/Desktop/Homeworks/Homeworks_c++/Integtal/main.cpp
 iostream
 -
-cstdint
--
-tuple
--
+Gausses.h
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/Integtal/Gausses.h
+FuncBank.h
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/Integtal/FuncBank.h
+Integrate.h
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/Integtal/Integrate.h
 
