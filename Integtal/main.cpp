@@ -48,6 +48,39 @@ constexpr double Integrate(Function my_function) {
 }
 
 
+struct Order33{
+    constexpr static std::tuple points = {0.0, 0.77459, -0.77459};
+    constexpr static std::tuple weights =  {8.0/9.0,  5.0/9.0, 5.0/9.0};
+    constexpr static int order = 3;
+};
+
+struct NewFunc{
+    constexpr static double my_function(double x) {
+        return x * x;//- 7 * (1 + x * x / 2 + x * x * x * x / 24);
+    }
+};
+
+template<typename Function , typename ord, int current, int order>
+struct intrrr{
+    constexpr static double Integrates() {
+        return Function::my_function((std::get<current>(ord::points)))*std::get<current>(ord::weights) + intrrr<Function, ord, current+1, order>::Integrates();
+    }
+};
+
+template<typename Function , typename ord, int order>
+struct intrrr<Function, ord, order, order>{
+    constexpr static double Integrates() {
+        return 0;
+    }
+};
+
+template<typename Function , typename ord>
+constexpr double Integrates() {
+    return intrrr<Function, ord, 0, ord::order>::Integrates();
+}
+
+
+
 int main() {
     constexpr auto f = my_function<double>;
     //auto result = Integrate(f);
@@ -55,9 +88,11 @@ int main() {
 //    static_assert(Integrate(f)-83.333 < 1e-3 and Integrate(f)-83.333 >= 0, "good");
     constexpr const std::tuple<double,double,double,double,double,double> points_weights = {0.0, 8.0/9.0, 0.77459, 5.0/9.0, -0.77459, 5.0/9.0};
 //    constexpr
-    std::cout << intt<std::function<double(double)>, 0, 6>::integral(f);
+    std::cout << intt<std::function<double(double)>, 0, 6>::integral(f) << std::endl;
 //    constexpr bool oooo = intt<std::function<double(double)>, 0, 6>::integral(f) > 0;
 //    static_assert(oooo);
+    std::cout << Integrates<NewFunc, Order33>() << std::endl;
+    static_assert(Integrates<NewFunc, Order33>() - 0.66666 < 1e-3);
     static_assert(std::get<0>(points_weights) == 0);
     return 0;
 }
