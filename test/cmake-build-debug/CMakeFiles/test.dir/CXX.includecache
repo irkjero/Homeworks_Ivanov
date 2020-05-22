@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/test/Task1.cpp
+
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/test/Task2.h
+
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/test/Task3.h
+
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/test/Task4.h
+
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/test/Task5.h
+
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/test/main.cpp
+iostream
+-
+math.h
+-
+functional
+-
+Task2.h
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/test/Task2.h
+Task3.h
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/test/Task3.h
+Task4.h
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/test/Task4.h
+Task5.h
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/test/Task5.h
+
