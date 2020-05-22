@@ -14,6 +14,10 @@ public:
     ~WeakPtr(){
         delete sptr;
     };
+
+    WeakPtr& operator=(const WeakPtr& that);
+    bool operator==(const WeakPtr& that) const;
+
 };
 
 #endif //TEST_TASK1_H
