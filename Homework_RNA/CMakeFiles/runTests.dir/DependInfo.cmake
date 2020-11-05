@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/petr/Homework_RNA/RNA.cpp" "/home/petr/Homework_RNA/CMakeFiles/runTests.dir/RNA.cpp.o"
-  "/home/petr/Homework_RNA/tests.cpp" "/home/petr/Homework_RNA/CMakeFiles/runTests.dir/tests.cpp.o"
+  "/home/petr/Homeworks_Ivanov/Homework_RNA/RNA.cpp" "/home/petr/Homeworks_Ivanov/Homework_RNA/CMakeFiles/runTests.dir/RNA.cpp.o"
+  "/home/petr/Homeworks_Ivanov/Homework_RNA/tests.cpp" "/home/petr/Homeworks_Ivanov/Homework_RNA/CMakeFiles/runTests.dir/tests.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

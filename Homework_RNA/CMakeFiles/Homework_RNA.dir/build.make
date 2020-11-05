@@ -63,10 +63,10 @@ RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/petr/Homework_RNA
+CMAKE_SOURCE_DIR = /home/petr/Homeworks_Ivanov/Homework_RNA
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/petr/Homework_RNA
+CMAKE_BINARY_DIR = /home/petr/Homeworks_Ivanov/Homework_RNA
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Homework_RNA.dir/depend.make
@@ -79,29 +79,29 @@ include CMakeFiles/Homework_RNA.dir/flags.make
 
 CMakeFiles/Homework_RNA.dir/main.cpp.o: CMakeFiles/Homework_RNA.dir/flags.make
 CMakeFiles/Homework_RNA.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/petr/Homework_RNA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Homework_RNA.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Homework_RNA.dir/main.cpp.o -c /home/petr/Homework_RNA/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/petr/Homeworks_Ivanov/Homework_RNA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Homework_RNA.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Homework_RNA.dir/main.cpp.o -c /home/petr/Homeworks_Ivanov/Homework_RNA/main.cpp
 
 CMakeFiles/Homework_RNA.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Homework_RNA.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petr/Homework_RNA/main.cpp > CMakeFiles/Homework_RNA.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petr/Homeworks_Ivanov/Homework_RNA/main.cpp > CMakeFiles/Homework_RNA.dir/main.cpp.i
 
 CMakeFiles/Homework_RNA.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Homework_RNA.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petr/Homework_RNA/main.cpp -o CMakeFiles/Homework_RNA.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petr/Homeworks_Ivanov/Homework_RNA/main.cpp -o CMakeFiles/Homework_RNA.dir/main.cpp.s
 
 CMakeFiles/Homework_RNA.dir/RNA.cpp.o: CMakeFiles/Homework_RNA.dir/flags.make
 CMakeFiles/Homework_RNA.dir/RNA.cpp.o: RNA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/petr/Homework_RNA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Homework_RNA.dir/RNA.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Homework_RNA.dir/RNA.cpp.o -c /home/petr/Homework_RNA/RNA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/petr/Homeworks_Ivanov/Homework_RNA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Homework_RNA.dir/RNA.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Homework_RNA.dir/RNA.cpp.o -c /home/petr/Homeworks_Ivanov/Homework_RNA/RNA.cpp
 
 CMakeFiles/Homework_RNA.dir/RNA.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Homework_RNA.dir/RNA.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petr/Homework_RNA/RNA.cpp > CMakeFiles/Homework_RNA.dir/RNA.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petr/Homeworks_Ivanov/Homework_RNA/RNA.cpp > CMakeFiles/Homework_RNA.dir/RNA.cpp.i
 
 CMakeFiles/Homework_RNA.dir/RNA.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Homework_RNA.dir/RNA.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petr/Homework_RNA/RNA.cpp -o CMakeFiles/Homework_RNA.dir/RNA.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petr/Homeworks_Ivanov/Homework_RNA/RNA.cpp -o CMakeFiles/Homework_RNA.dir/RNA.cpp.s
 
 # Object files for target Homework_RNA
 Homework_RNA_OBJECTS = \
@@ -115,7 +115,7 @@ Homework_RNA: CMakeFiles/Homework_RNA.dir/main.cpp.o
 Homework_RNA: CMakeFiles/Homework_RNA.dir/RNA.cpp.o
 Homework_RNA: CMakeFiles/Homework_RNA.dir/build.make
 Homework_RNA: CMakeFiles/Homework_RNA.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/petr/Homework_RNA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Homework_RNA"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/petr/Homeworks_Ivanov/Homework_RNA/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Homework_RNA"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Homework_RNA.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -128,6 +128,6 @@ CMakeFiles/Homework_RNA.dir/clean:
 .PHONY : CMakeFiles/Homework_RNA.dir/clean
 
 CMakeFiles/Homework_RNA.dir/depend:
-	cd /home/petr/Homework_RNA && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/petr/Homework_RNA /home/petr/Homework_RNA /home/petr/Homework_RNA /home/petr/Homework_RNA /home/petr/Homework_RNA/CMakeFiles/Homework_RNA.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/petr/Homeworks_Ivanov/Homework_RNA && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/petr/Homeworks_Ivanov/Homework_RNA /home/petr/Homeworks_Ivanov/Homework_RNA /home/petr/Homeworks_Ivanov/Homework_RNA /home/petr/Homeworks_Ivanov/Homework_RNA /home/petr/Homeworks_Ivanov/Homework_RNA/CMakeFiles/Homework_RNA.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Homework_RNA.dir/depend
 
