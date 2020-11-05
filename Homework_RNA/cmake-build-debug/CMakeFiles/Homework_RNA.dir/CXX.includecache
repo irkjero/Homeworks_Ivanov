@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/Homework_RNA/Nucl.h
+iostream
+-
+
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/Homework_RNA/RNA.h
+unordered_map
+-
+Nucl.h
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/Homework_RNA/Nucl.h
+
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/Homework_RNA/main.cpp
+iostream
+-
+RNA.h
+/Users/xloride/Desktop/Homeworks/Homeworks_c++/Homework_RNA/RNA.h
+
