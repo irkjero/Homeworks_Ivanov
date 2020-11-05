@@ -131,15 +131,6 @@ int main() {
     RNAA_2 = std::move(tmp_);
     std:: cout << Nucliotide(RNAA_2.length()) << std::endl;
     std:: cout << Nucliotide(tmp_.length()) << std::endl;
-
-//    RNAA[2] = C;
-
-
-    // const
-    // move
-    // =
-    // []
-    //for 1 nucl
-
+    
     return 0;
 }
