@@ -15,9 +15,8 @@ public:
     }
 
     void dry(){
-
         std::unique_lock<std::mutex> lk{*mutex};
-        *flag = false;
+        cond->wait(lk, [=]{return !*flag;});
         std::cout << "dry" << std::endl;
         car->dry_car();
         *flag = true;
