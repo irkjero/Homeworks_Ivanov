@@ -7,15 +7,17 @@
 #include "Car.h"
 
 class Painter{
-    Car car;
-    std::recursive_mutex& mu;
+    Car* car;
 public:
-    Painter(Car car_, std::recursive_mutex &mu_): car{car_}, mu{mu_}{}
-
-    bool paint(int a){
-        //std::lock_guard<std::recursive_mutex> guard(mu);
-        mu.lock();
-        car.change_color(a);
+    Painter(Car* car_){
+        car = car_;
     }
+
+    void paint(int a){
+        mutex->lock();
+        car->change_color(a);
+    }
+    std::mutex* mutex = nullptr;
 };
+
 #endif //TEST_18_12_20_PAINTER_H

@@ -8,16 +8,17 @@
 #include "Car.h"
 
 class Dryer{
-    Car car;
-    std::recursive_mutex& mu;
+    Car* car;
 public:
-    Dryer(Car car_, std::recursive_mutex &mu_): car{car_}, mu{mu_}{}
-
-    bool dry(){
-//        std::lock_guard<std::recursive_mutex> guard(mu);
-        car.dry_car();
-        mu.unlock();
+    Dryer(Car* car_){
+        car = car_;
     }
+
+    void dry(){
+        car->dry_car();
+      mutex->unlock();
+    }
+    std::mutex* mutex = nullptr;
 };
 
 #endif //TEST_18_12_20_DRYER_H

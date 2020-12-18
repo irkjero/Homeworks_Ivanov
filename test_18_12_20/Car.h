@@ -25,8 +25,8 @@ public:
         is_dry = true;
     }
 
-    bool isPainted(){
-        return is_dry;
+    int colour(){
+        return color;
     }
 
 };
