@@ -15,10 +15,18 @@ public:
     }
 
     void dry(){
+
+        std::unique_lock<std::mutex> lk{*mutex};
+        *flag = false;
+        std::cout << "dry" << std::endl;
         car->dry_car();
-      mutex->unlock();
+        *flag = true;
+        cond->notify_one();
     }
     std::mutex* mutex = nullptr;
+    bool *flag = nullptr;
+    std::condition_variable *cond = nullptr;
+
 };
 
 #endif //TEST_18_12_20_DRYER_H

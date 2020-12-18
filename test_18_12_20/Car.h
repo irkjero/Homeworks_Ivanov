@@ -12,6 +12,7 @@ public:
     Car(bool is_dry_, int color_) : is_dry{is_dry_}, color{color_}{}
 
     void change_color(int new_color){
+        std::cout << "paint" << std::endl;
         if(is_dry == false){
             std::cout << "We cant paint it" << std::endl;
         }
@@ -23,6 +24,7 @@ public:
 
     void dry_car(){
         is_dry = true;
+
     }
 
     int colour(){
