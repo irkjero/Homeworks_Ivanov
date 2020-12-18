@@ -152,16 +152,32 @@ public:
         // destroy all buckets one by one
         clear();
         // destroy the hash table
-        delete [] table;
+        if(table != NULL)
+            delete [] table;
         size_ = 0;
     }
 
     HashMap& operator=(const HashMap<key, T, TAllocator>& right){
         if(this == &right)
             return *this;
-        table = right.table;
         TABLE_SIZE = right.TABLE_SIZE;
         size_ = right.size_;
+
+        for(int i = 0; i < TABLE_SIZE; i++){
+            auto entry = right.table[i];
+            if(entry == nullptr)
+                table[i] = nullptr;
+            else{
+                auto* next1 = new HashNode<key, T, TAllocator>(entry->getKey(), entry->getValue());
+                table[i] = next1;
+                while (entry != nullptr) {
+                    auto* next = new HashNode<key, T, TAllocator>(entry->getKey(), entry->getValue());
+                    table[i]->setNext(next);
+                    table[i] = table[i]->getNext();
+                    entry = entry->getNext();
+                }
+            }
+        }
         return *this;
     }
 

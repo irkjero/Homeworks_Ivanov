@@ -46,8 +46,8 @@ int main() {
         std::cout << "Value2: " << i << std::endl;
     }
 
-    //map = map2;
-    //map = std::move(map2);
+    map = map2;
+    map = std::move(map2);
 
     for(auto i : map){
         std::cout << "Value1: " << i << std::endl;
